@@ -2,25 +2,37 @@ using UnityEngine;
 
 public class SphereFloat : MonoBehaviour
 {
-    private float interval = 2f;
-    private float force = 15;
-    Rigidbody sphereRb;
+    private float maxHeight = 0.5f;
+    private float yStart;
+    private float yNew;
+    private float waveSpeed = 2.0f;
+
+    public float maxRota = 10f;
+    private float xNew;
+    public float rotaSpeed = 2f;
 
     void Start()
     {
-        sphereRb = GetComponent<Rigidbody>();
+        yStart = transform.position.y;
     }
 
-    // Add Target height and minimum height, apply impulse upward on minimum height and maybe impulse downward on maximum height to ensure that the sphere stays in boundaries
-
-    void FixedUpdate()
+    void Update()
     {
-        Debug.Log(interval);
-        interval -= Time.fixedDeltaTime;
-        if (interval <= 0)
-        {
-            sphereRb.AddForce(Vector3.up * force, ForceMode.Impulse);
-            interval = 1;
-        }
+        floatWave();
+        rotateWave();
+    }
+
+    void floatWave()
+    {
+        yNew = yStart + maxHeight * Mathf.Sin(Time.time * waveSpeed);
+        transform.position = new Vector3(transform.position.x, yNew, transform.position.z);
+    }
+
+    // Rotate the X axes back and forth to make it look even more floaty!   
+
+    void rotateWave()
+    {
+        xNew = -maxRota * Mathf.Sin(Time.time * rotaSpeed);
+        transform.rotation = Quaternion.Euler(xNew, transform.rotation.y, transform.rotation.z);
     }
 }
