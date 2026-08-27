@@ -28,7 +28,8 @@ public class moveTest2D : MonoBehaviour
         if (jumpPressed)
         {
             Debug.Log("Jumping");
-            playerRb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            //playerRb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            playerRb.linearVelocity = Vector3.up * jumpHeight;
             jumpPressed = false;
         }
     }
