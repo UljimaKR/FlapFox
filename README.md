@@ -1,2 +1,4 @@
 Project FlapFox (Subject to change) is a game that aims to combine the arcade-style elements of both the simplistic Flappy Bird and Nintendo's renowned Star Fox series. Inspired by Sonic Generations perspective-swapping, the player will navigate
 through both 2D- and 3D-Worlds and encounter two separate modes of play which will lead him through a total of 5-levels-to-be as of the initial time of planning.
+
+Note: This repo has been made public for portfolio and review purposes only and does not represent the final product.
