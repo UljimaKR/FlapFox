@@ -18,7 +18,7 @@ public class SceneSwap : MonoBehaviour
     public IEnumerator LoadDelay()
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Lv01_Test");
+        SceneManager.LoadScene("Lv01");
         // Play an audio effect here
     }
 

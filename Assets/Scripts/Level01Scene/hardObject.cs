@@ -27,7 +27,7 @@ public class hardObject : MonoBehaviour
 
 
             player = other.gameObject;
-            player.GetComponent<moveTest2D>().receiveDamage(damage);
+            player.GetComponent<gameplay2D>().receiveDamage(damage);
         }
     }
 }

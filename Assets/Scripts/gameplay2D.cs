@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public class moveTest2D : MonoBehaviour
+public class gameplay2D : MonoBehaviour
 {
     private float health;
     private float armor;
