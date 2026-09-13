@@ -22,6 +22,11 @@ public class spawnObstacles : MonoBehaviour
 
     IEnumerator SpawnObstacles()
     {
+        if(playerObj == null)
+        {
+            yield break;
+        }
+
         Debug.Log("Get Ready!");
         yield return new WaitUntil(() => playerObj.transform.position.z <= -3);
         SpawnObstacle();

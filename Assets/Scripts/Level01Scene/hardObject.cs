@@ -3,7 +3,7 @@ using UnityEngine;
 public class hardObject : MonoBehaviour
 {
     private Rigidbody playerRb;
-    private float damage = 50f;
+    private float damage = 25f;
 
     public GameObject player;
 

@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class gameplay2D : MonoBehaviour
 {
-    private float health;
+    public float health;
     private float armor;
 
 
